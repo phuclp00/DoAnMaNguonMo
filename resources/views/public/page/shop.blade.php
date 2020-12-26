@@ -135,8 +135,8 @@
                                                 <div class="action">
                                                     <div class="actions_inner">
                                                         <ul class="add_to_links">
-                                                            <li><a class="cart" href="#"><i class="bi bi-shopping-bag4"></i></a></li>
-                                                            <li><a class="wishlist" href="#"><i class="bi bi-shopping-cart-full"></i></a></li>
+                                                            <li><a class="cart" href="{{route('add_to_cart',[$list_product->book_id])}}"><i class="bi bi-shopping-bag4"></i></a></li>
+                                                            <li><a class="wishlist" href="{{route('add_to_cart',[$list_product->book_id])}}"><i class="bi bi-shopping-cart-full"></i></a></li>
                                                             <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
                                                             <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
                                                         </ul>
@@ -193,8 +193,8 @@
                                                 <div class="action">
                                                     <div class="actions_inner">
                                                         <ul class="add_to_links">
-                                                            <li><a class="cart" href="#"><i class="bi bi-shopping-bag4"></i></a></li>
-                                                            <li><a class="wishlist" href="#"><i class="bi bi-shopping-cart-full"></i></a></li>
+                                                            <li><a class="cart" href="{{route('add_to_cart',[$list_product->book_id])}}"><i class="bi bi-shopping-bag4"></i></a></li>
+                                                            <li><a class="wishlist" href="{{route('add_to_cart',[$list_product->book_id])}}"><i class="bi bi-shopping-cart-full"></i></a></li>
                                                             <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
                                                             <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
                                                         </ul>
@@ -252,8 +252,8 @@
                                             <div class="action">
                                                 <div class="actions_inner">
                                                     <ul class="add_to_links">
-                                                        <li><a class="cart" href="#"><i class="bi bi-shopping-bag4"></i></a></li>
-                                                        <li><a class="wishlist" href="#"><i class="bi bi-shopping-cart-full"></i></a></li>
+                                                        <li><a class="cart" href="{{route('add_to_cart',[$list_product->book_id])}}"><i class="bi bi-shopping-bag4"></i></a></li>
+                                                        <li><a class="wishlist" href="{{route('add_to_cart',[$list_product->book_id])}}"><i class="bi bi-shopping-cart-full"></i></a></li>
                                                         <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
                                                         <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
                                                     </ul>
@@ -314,9 +314,9 @@
                                             </ul>
                                             <p>{{Str::limit($item->description, $limit = 350, $end = '...')}}</p>
                                             <ul class="cart__action d-flex">
-                                                <li class="cart"><a href="#">Add to cart</a></li>
-                                                <li class="wishlist"><a href="#"></a></li>
-                                                <li class="compare"><a href="#"></a></li>
+                                                <li class="cart"><a href="{{route('add_to_cart',[$item->book_id])}}">Add to cart</a></li>
+                                                <li class="wishlist"><a href="{{route('add_to_cart',[$item->book_id])}}"></a></li>
+                                                <li class="compare"><a href="{{route('cart_view')}}"></a></li>
                                             </ul>
 
                                         </div>
@@ -353,9 +353,9 @@
                                             </ul>
                                             <p>{{Str::limit($item->description, $limit = 350, $end = '...')}}</p>
                                             <ul class="cart__action d-flex">
-                                                <li class="cart"><a href="#">Add to cart</a></li>
-                                                <li class="wishlist"><a href="#"></a></li>
-                                                <li class="compare"><a href="#"></a></li>
+                                                <li class="cart"><a href="{{route('add_to_cart',[$item->book_id])}}">Add to cart</a></li>
+                                                <li class="wishlist"><a href="{{route('add_to_cart',[$item->book_id])}}"></a></li>
+                                                <li class="compare"><a href="{{route('cart_view')}}"></a></li>
                                             </ul>
 
                                         </div>
@@ -392,9 +392,9 @@
                                             </ul>
                                             <p>{{Str::limit($item->description, $limit = 350, $end = '...')}}</p>
                                             <ul class="cart__action d-flex">
-                                                <li class="cart"><a href="#">Add to cart</a></li>
-                                                <li class="wishlist"><a href="#"></a></li>
-                                                <li class="compare"><a href="#"></a></li>
+                                                <li class="cart"><a href="{{route('add_to_cart',[$item->book_id])}}">Add to cart</a></li>
+                                                <li class="wishlist"><a href="{{route('add_to_cart',[$item->book_id])}}"></a></li>
+                                                <li class="compare"><a href="{{route('cart_view')}}"></a></li>
                                             </ul>
 
                                         </div>

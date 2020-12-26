@@ -84,8 +84,8 @@
                                 <div class="action">
                                     <div class="actions_inner">
                                         <ul class="add_to_links">
-                                            <li><a class="cart" href="#"><i class="bi bi-shopping-bag4"></i></a></li>
-                                            <li><a class="wishlist" href="#"><i class="bi bi-shopping-cart-full"></i></a></li>
+                                            <li><a class="cart" href="{{route('add_to_cart',[$product->book_id])}}"><i class="bi bi-shopping-bag4"></i></a></li>
+                                            <li><a class="wishlist" href="{{route('add_to_cart',[$product->book_id])}}"><i class="bi bi-shopping-cart-full"></i></a></li>
                                             <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
                                             <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
                                         </ul>
@@ -212,8 +212,8 @@
                                     <div class="action">
                                         <div class="actions_inner">
                                             <ul class="add_to_links">
-                                                <li><a class="cart" href="#"><i class="bi bi-shopping-bag4"></i></a></li>
-                                                <li><a class="wishlist" href="#"><i class="bi bi-shopping-cart-full"></i></a></li>
+                                                <li><a class="cart" href="{{route('add_to_cart',[$product->book_id])}}"><i class="bi bi-shopping-bag4"></i></a></li>
+                                                <li><a class="wishlist" href="{{route('add_to_cart',[$product->book_id])}}"><i class="bi bi-shopping-cart-full"></i></a></li>
                                                 <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
                                                 <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
                                             </ul>
@@ -275,8 +275,8 @@
                                     <div class="action">
                                         <div class="actions_inner">
                                             <ul class="add_to_links">
-                                                <li><a class="cart" href="#"><i class="bi bi-shopping-bag4"></i></a></li>
-                                                <li><a class="wishlist" href="#"><i class="bi bi-shopping-cart-full"></i></a></li>
+                                                <li><a class="cart" href="{{route('add_to_cart',[$product->book_id])}}"><i class="bi bi-shopping-bag4"></i></a></li>
+                                                <li><a class="wishlist" href="{{route('add_to_cart',[$product->book_id])}}"><i class="bi bi-shopping-cart-full"></i></a></li>
                                                 <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
                                                 <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
                                             </ul>
@@ -355,8 +355,8 @@
                                     <div class="action">
                                         <div class="actions_inner">
                                             <ul class="add_to_links">
-                                                <li><a class="cart" href="#"><i class="bi bi-shopping-bag4"></i></a></li>
-                                                <li><a class="wishlist" href="#"><i class="bi bi-shopping-cart-full"></i></a></li>
+                                                <li><a class="cart" href="{{route('add_to_cart',[$book_id->book_id])}}"><i class="bi bi-shopping-bag4"></i></a></li>
+                                                <li><a class="wishlist" href="{{route('add_to_cart',[$book_id->book_id])}}"><i class="bi bi-shopping-cart-full"></i></a></li>
                                                 <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
                                                 <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
                                             </ul>
@@ -419,8 +419,8 @@
                                     <div class="action">
                                         <div class="actions_inner">
                                             <ul class="add_to_links">
-                                                <li><a class="cart" href="#"><i class="bi bi-shopping-bag4"></i></a></li>
-                                                <li><a class="wishlist" href="#"><i class="bi bi-shopping-cart-full"></i></a></li>
+                                                <li><a class="cart" href="{{route('add_to_cart',[$product_tag->book_id])}}"><i class="bi bi-shopping-bag4"></i></a></li>
+                                                <li><a class="wishlist" href="{{route('add_to_cart',[$product_tag->book_id])}}"><i class="bi bi-shopping-cart-full"></i></a></li>
                                                 <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
                                                 <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
                                             </ul>
@@ -540,8 +540,8 @@
                             <div class="action">
                                 <div class="actions_inner">
                                     <ul class="add_to_links">
-                                        <li><a class="cart" href="#"><i class="bi bi-shopping-bag4"></i></a></li>
-                                        <li><a class="wishlist" href="#"><i class="bi bi-shopping-cart-full"></i></a></li>
+                                        <li><a class="cart" href="{{route('add_to_cart',[$item_bestseller->book_id])}}"><i class="bi bi-shopping-bag4"></i></a></li>
+                                        <li><a class="wishlist" href="{{route('add_to_cart',[$item_bestseller->book_id])}}"><i class="bi bi-shopping-cart-full"></i></a></li>
                                         <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
                                         <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
                                     </ul>
@@ -669,7 +669,7 @@
 		                                </div>
 		                            </div>
 		                            <div class="addtocart-btn">
-		                                <a href="#">Add to cart</a>
+		                                <a href="{{route('add_to_cart',[$item_bestseller->book_id])}}">Add to cart</a>
 		                            </div>
 		                        </div>
                             </div>
