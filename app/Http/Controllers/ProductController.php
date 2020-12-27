@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CategoryModel;
+use App\Models\Fileupload;
 use Illuminate\Http\Request;
 use App\Models\ProductModel;
 use Gloudemans\ShoppingCart\CartItem;
@@ -70,4 +71,44 @@ class ProductController extends Controller
     {
         return view('public.page.cart');
     }
+    //ADMIN 
+    public function book_add(Request $request)
+    {
+        try{
+        $data = new ProductModel();
+        $data->book_id=$request->book_id;
+        $data->book_name=$request->book_name;
+        $data->cat_id=$request->cat_id;
+        $data->pub_id=$request->pub_id;
+        $file_name=$request->img;
+        $data->img=$file_name!=null?$file_name->getClientOriginalName():null;
+        if(\is_array($request->thumb)){
+            foreach ($request->thumb as $key => $value) {
+                $arr_thumb_name[]=$value->getClientOriginalName();
+                $file =  new FileuploadController();
+                $file->store($value,"thumb");
+            }
+            $data->thumb=\implode(";",$arr_thumb_name);
+        }
+            else{ 
+                $namefile=$request->thumb;
+               $data->thumb=$namefile->getClientOriginalName();
+            }
+        $data->price=$request->price;
+        $data->promotion_price=$request->promotion;
+        $data->save();
+        $request->session()->flash('info_warning', '<div class="alert alert-success" style="text-align: center;font-size: x-large;font-family: fangsong;"">
+                  Upload thành công </div>');
+             return \redirect()->back();
+      
+        }
+        catch(\Exception $e){
+            $request->session()->flash('info_warning', '<div class="alert alert-danger" style="text-align: center;font-size: x-large;font-family: fangsong;"">
+                  Upload thất bại </div>');
+             return \redirect()->back();
+        }
+    }
+    public function book_edit(Request $request){
+
+    }   
 }

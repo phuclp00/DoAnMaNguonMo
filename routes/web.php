@@ -39,6 +39,73 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+//===================================ADMIN ===========================================================================//
+        Route::group(['prefix' => 'admin'], function () {
+
+            Route::get('/', function () {
+                return view('admin.index');
+            })->name('index');
+
+            //Dash board
+            Route::get('/dashboard',[HomeController::class,'dash_view'])->name('admin.dash_view');
+
+            //==========================================Category==============================================================
+            Route::get('/category',[HomeController::class,'category_view'])->name('admin.category_view');
+            //Category add view 
+            Route::get('/category-view-add',[HomeController::class,'category_add_view'])->name('admin.add-category_view');
+            //Category add 
+            Route::get('/category-add',[CategoryController::class,'add_category'])->name('admin.add_category');
+            //Category edit view
+            Route::get('/category-edit-view/{cat_id}',[HomeController::class,'category_edit_view'])->name('admin.edit_category_view');
+            //Category edit 
+            Route::get('/category-edit/{cat_id}',[CategoryController::class,'category_edit'])->name('admin.edit_category');
+            //Category delete 
+            Route::get('/category-delete{cat_id}',[CategoryController::class,'category_delete'])->name('admin.delete_category');
+
+            //==========================================Book list==============================================================
+            Route::get('/book-list',[HomeController::class,'book_list_view'])->name('admin.book_list_view');
+            //Book add view
+            Route::get('/book-add-view',[HomeController::class,'book_list_add_view'])->name('admin.add_book_view');
+            //Book add
+            Route::post('/book-add',[ProductController::class,'book_add'])->name('admin.add_book');
+            //Book edit view
+            Route::get('/book-edit-view/{book_id}',[HomeController::class,'book_edit_view'])->name('admin.edit_book_view');
+            //Book edit
+            Route::get('/book-edit/{book_id}',[ProductModel::class,'book_edit'])->name('admin.edit_book');
+            //Book delete 
+            Route::get('/book-delete/{book_id}',[ProductModel::class,'book_delete'])->name('admin.book_category');
+
+            //==========================================Publisher=============================================================
+            Route::get('/publisher',[HomeController::class,'publisher_view'])->name('admin.publisher_view');
+            //Publisher-add view
+            Route::get('publisher-add-view',[HomeController::class,'add_publisher_view'])->name('admin.add_publisher_view');
+            //Publisher-add
+            Route::post('publisher-add',[PublisherController::class,'add_publisher'])->name('admin.add_publisher');
+            //Publisher-edit view
+            Route::get('publisher-edit-view/{pub_id}',[HomeController::class,'edit_publisher_view'])->name('admin.edit_publisher_view');
+            //Publisher edit
+            Route::post('publisher-edit/{pub_id}',[PublisherController::class,'edit_publisher'])->name('admin.edit_publisher');
+            //Publisher delete
+            Route::get('publisher-delete/{pub_id}',[PublisherController::class,'delete_publisher'])->name('admin.delete_publisher');
+            
+
+            //================================ MANAGER USER================================================================//
+            Route::get('user-list',[HomeController::class,'user_list_view'])->name('admin.user_list_view');
+            Route::get('add-user',[HomeController::class,'add_user'])->name('admin.add_user');
+              //================================ MANAGER CATEEGORY================================================================//
+            
+            Route::get('cat-delete/{cat_id}',[CategoryController::class,'cat_delete'])->name('cat_delete');
+            //================================ LOGIN ADMIN================================================================//
+   
+            Route::POST('/admin',[HomeController::class,'admin_login'])->name('admin_login');
+             //================================ SLIDER ====================================================================//
+    
+});
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
 
 $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
 //Route::get('/', [HomeController::class, 'view'])->name('home_view');
