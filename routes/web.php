@@ -57,7 +57,7 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
                     $controllerName = 'login';
                     Route::group(['prefix' => $controllerName], function () {
                         $controller = LoginController::class;
-                        Route::get('/login-view', [$controller , 'show_login'])->name("show_login");
+                        Route::all('/login-view', [$controller , 'show_login'])->name("show_login");
                         Route::get('/sign-in', [$controller , 'Login'])->name("login_signin");
                         Route::get('/sign-up', [$controller , 'Register'])->name("login_signup");
                         Route::get('/log-out', [$controller , 'log_out'])->name("log_out");
