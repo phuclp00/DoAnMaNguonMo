@@ -127,9 +127,27 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
                 $controller = HomeController::class;
                 Route::get('/', [$controller, 'wishlist_view'])->name("wishlist_view");
             });
-           
+            //======================================HOME - CHECKOUT ====================================//
+
+            $controllerName = 'checkout';
+            Route::group(['prefix' => $controllerName], function () {
+                $controller = HomeController::class;
+                Route::get('/check-out-product', [$controller, 'checkout_view'])->name("checkout_view");
+                Route::get('/check-out-order', [$controller, 'add_order_cart'])->name("add_order_cart");
+                Route::get('/check-out-order-detail', [$controller, 'add_order_detail'])->name("add_order_detail");
+                Route::get('/check-out-register-address', [LoginController::class, 'register_address'])->name("register_address");
+            });
+            //======================================HOME - CART ====================================//
             
-            
+            $controllerName = 'cart';
+            Route::group(['prefix' => $controllerName], function () {
+                $controller = ProductController::class;               
+                Route::get('/add-to-cart/{id}', [$controller,'add_to_cart'])->name("add_to_cart");
+                Route::post('/add-to-cart-special',[$controller,'add_cart_ajax'])->name("add_to_cart_ajax");
+                Route::get('/update-cart', [$controller,'update_cart'])->name("update_cart");
+                Route::get('/show-cart', [$controller,'cart_view'])->name("cart_view");
+                
+            });
             //======================================HOME - BLOG ====================================//
 
             $controllerName = 'blog';
@@ -172,12 +190,7 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
                 //LAY ID CATEGORY KHI DUOC TRUYEN GIA TRI VAO TRA VE LIST THEO ID CATEGORY
                 Route::get('/cat_id={cat_id}',[HomeController::class,'get_category'])->name("category_view");
                 Route::get('/search_product}',[ CategoryController::class,'find_product'])->name("find_product");
-            });
-           
-
-          
-//===================================ADMIN ===========================================================================//
-      
+            });    
 
     //================================ UPLOAD_ FILE ========================================================//
         Route::post('fileupload', [FileuploadController::class,'store'])->name('fileupload.store');

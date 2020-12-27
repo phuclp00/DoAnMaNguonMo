@@ -72,8 +72,8 @@
                                             <li><a href="{{route('account_view',[$user->user_name])}}">My Account</a></li>
                                         @endforeach
                                     @endif
-                                    <li><a href="#">Cart Page</a></li>
-                                    <li><a href="#">Checkout Page</a></li>
+                                    <li><a href="{{route('cart_view')}}">Cart Page</a></li>
+                                    <li><a href="{{route('checkout_view')}}">Checkout Page</a></li>
                                     <li><a href="{{route('error_view')}}">404 Page</a></li>
                                     <li><a href="{{route('faq_view')}}">Faq Page</a></li>
                                     <li><a href="{{route('team_view')}}">Team Page</a></li>
@@ -107,7 +107,7 @@
                                     <span>{{Cart::subtotal()."$"}}</span>
                                 </div>
                                 <div class="mini_action checkout">
-                                    <a class="checkout__btn" href="#">Go to Checkout</a>
+                                    <a class="checkout__btn" href="{{route('checkout_view')}}">Go to Checkout</a>
                                 </div>
                                 <div class="single__items">
                                     <div class="miniproduct">
@@ -135,7 +135,7 @@
                                     </div>
                                 </div>
                                 <div class="mini_action cart">
-                                    <a class="cart__btn" href="#">View and edit cart</a>
+                                    <a class="cart__btn" href="{{route('cart_view')}}">View and edit cart</a>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +232,7 @@
                                     <li><a href="{{route('account_view',[$user->user_name])}}">My Account</a></li>
                                     @endforeach
                                 @endif
-                                <li><a href="#">Checkout Page</a></li>
+                                <li><a href="{{route('checkout_view')}}">Checkout Page</a></li>
                                 <li><a href="{{route('wishlist_view')}}">Wishlist Page</a></li>
                                 <li><a href="{{route('error_view')}}">404 Page</a></li>
                                 <li><a href="{{route('faq_view')}}">Faq Page</a></li>
