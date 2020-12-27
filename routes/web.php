@@ -149,7 +149,7 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
             Route::group(['prefix' => $controllerName], function () {
                 $controller = UserController::class;
                 Route::POST('/img_change/{user_name}', [$controller, 'update_img'])->name("update_img");
-                Route::get('/account_view/{user_name}', [$controller, 'account_view'])->name("account_view");
+                Route::post('/account_view/{user_name}', [$controller, 'account_view'])->name("account_view");
                 Route::post('/account-update/{user_name}',[$controller,'account_update'])->name("account_update");
             });
             //====================================== - SHOP ========================================================//
