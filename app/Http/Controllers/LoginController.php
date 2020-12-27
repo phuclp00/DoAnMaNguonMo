@@ -28,10 +28,13 @@ class LoginController extends Controller
     {
         $username = $request->username;
         $password = $request->userpassword;
+	if (session()->has('user_info')) {
+            return view('public.index');
+        }
   
         try {
 
-            $check_user = UserModel::where('user_name', $username)->first();
+            $check_user = User::where('user_name', $username)->first();
             if (Hash::check($password, $check_user->password)) {
                 $show_info = Show_info_user::where('user_name', $check_user->user_name)->first();
                 $request->session()->push('user_info', $show_info);
