@@ -87,7 +87,7 @@
                                     <li><a href="{{route('checkout_view')}}">Checkout Page</a></li>
                                     <li><a href="{{route('checkout_view')}}">Wishlist Page</a></li>
                                     <li><a href="{{route('error_view')}}">404 Page</a></li>
-                                    <li><a href="{{route('faq_view')}}">Faq Page</a></li>
+                                    <li><a href="#">Faq Page</a></li>
                                     <li><a href="{{route('team_view')}}">Team Page</a></li>
                                 </ul>
                             </div>
@@ -267,7 +267,7 @@
                                 <li><a href="{{route('checkout_view')}}">Checkout Page</a></li>
                                 <li><a href="{{route('wishlist_view')}}">Wishlist Page</a></li>
                                 <li><a href="{{route('error_view')}}">404 Page</a></li>
-                                <li><a href="{{route('faq_viewp')}}">Faq Page</a></li>
+                                <li><a href="#">Faq Page</a></li>
                                 <li><a href="{{route('team_view')}}">Team Page</a></li>
                             </ul>
                         </li>
