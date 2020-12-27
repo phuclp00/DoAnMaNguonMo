@@ -142,9 +142,9 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
             $controllerName = 'cart';
             Route::group(['prefix' => $controllerName], function () {
                 $controller = ProductController::class;               
-                Route::get('/add-to-cart/{id}')->name("add_to_cart");
+                Route::get('/add-to-cart/{id}', [$controller,'add_to_cart'])->name("add_to_cart");
                 Route::post('/add-to-cart-special',[$controller,'add_cart_ajax'])->name("add_to_cart_ajax");
-                Route::get('/update-cart', [$controller,'update_cart'])->name("update_cart");
+                Route::get('/update-cart/{cat_id}', [$controller,'update_cart'])->name("update_cart");
                 Route::get('/show-cart', [$controller,'cart_view'])->name("cart_view");
                 
             });
