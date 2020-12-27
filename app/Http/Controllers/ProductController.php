@@ -81,8 +81,7 @@ class ProductController extends Controller
         $data->cat_id=$request->cat_id;
         $data->pub_id=$request->pub_id;
         $file_name=$request->img;
-        //$data->img=$file_name!=null?$file_name->getClientOriginalName():null;
-        $data->img=$file_name->getClientOriginalName();
+        $data->img=$file_name!=null?$file_name->getClientOriginalName():null;
         if(\is_array($request->thumb)){
             foreach ($request->thumb as $key => $value) {
                 $arr_thumb_name[]=$value->getClientOriginalName();
