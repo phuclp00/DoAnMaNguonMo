@@ -127,7 +127,8 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
                 $controller = HomeController::class;
                 Route::get('/', [$controller, 'wishlist_view'])->name("wishlist_view");
             });
-          
+           
+            
             
             //======================================HOME - BLOG ====================================//
 
@@ -143,8 +144,18 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
                 $controller = HomeController::class;
                 Route::get('/', [$controller, 'blogdetail_view'])->name("blogdetail_view");
             });
-    
-	//=========================================== MY ACCOUNT ================================================//
+            //====================================== - PRODUCT ========================================================//
+
+            $controllerName = 'product';
+            Route::group(['prefix' => $controllerName], function () {
+                $controller = ProductController::class;
+                //KHI KHONG TRUYEN ID THI TRA VE SHOP VIEW 
+                Route::get('/', [HomeController::class, 'shop_view']);
+                
+                //LAY ID VA CAT_ID SAN PHAM KHI DUOC TRUYEN GIA TRI VAO TRA VE TRANG PRODUCT DETAIL
+            Route::get('/book_id={id} && cat_id={cat_id?}',[ HomeController::class,'get_items'])->name("product_view");
+            
+            });
             $controllerName = 'my-account';
             Route::group(['prefix' => $controllerName], function () {
                 $controller = UserController::class;
@@ -157,17 +168,20 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
             $controllerName = 'shop';
             Route::group(['prefix' => $controllerName], function () {
                 $controller = CategoryController::class;
-                Route::get('/', [HomeController::class, 'shop_view'])->name("shop_view",["get_cat_items"=>$get_cat_items=null]);
+                Route::get('', [HomeController::class, 'shop_view'])->name("shop_view",["get_cat_items"=>$get_cat_items=null]);
                 //LAY ID CATEGORY KHI DUOC TRUYEN GIA TRI VAO TRA VE LIST THEO ID CATEGORY
                 Route::get('/cat_id={cat_id}',[HomeController::class,'get_category'])->name("category_view");
                 Route::get('/search_product}',[ CategoryController::class,'find_product'])->name("find_product");
             });
-            //====================================== - ACCOUNT ========================================================//
+           
 
-         
+          
+//===================================ADMIN ===========================================================================//
       
 
     //================================ UPLOAD_ FILE ========================================================//
         Route::post('fileupload', [FileuploadController::class,'store'])->name('fileupload.store');
     //================================ AJAX - POST REQUEST =================================================//
-       
+        Route::post('item',function($request){
+            
+        });

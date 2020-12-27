@@ -14,10 +14,10 @@
                     <ul class="meninmenu d-flex justify-content-start">
                         <li class="drop with--one--item"><a href="{{route('home_view')}}">Home</a>
                         </li>
-                        <li class="drop"><a href="#">Shop</a>
+                        <li class="drop"><a href="{{route('shop_view')}}">Shop</a>
 
                         </li>
-                        <li class="drop"><a href="#">Books</a>
+                        <li class="drop"><a href="{{route('shop_view')}}">Books</a>
                             <div class="megamenu mega03">
                                 <ul class="item item03">
                                     <li class="title">Categories</li>
@@ -43,7 +43,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="drop"><a href="#">Kids</a>
+                        <li class="drop"><a href="{{route('shop_view')}}">Kids</a>
                             <div class="megamenu mega02">
                                 <ul class="item item02">
                                     <li class="title">Top Collections</li>
@@ -239,7 +239,7 @@
                                 <li><a href="{{route('team_view')}}">Team Page</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Shop</a>
+                        <li><a href="{{route('shop_view')}}">Shop</a>
 
                         </li>
                         <li><a href="{{route('blog_view')}}">Blog</a>
