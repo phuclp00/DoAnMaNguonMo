@@ -170,5 +170,4 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
     //================================ UPLOAD_ FILE ========================================================//
         Route::post('fileupload', [FileuploadController::class,'store'])->name('fileupload.store');
     //================================ AJAX - POST REQUEST =================================================//
-        Route::post('item',function($request){
-            
+       
