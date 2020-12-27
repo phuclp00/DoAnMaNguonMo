@@ -173,16 +173,16 @@
         },
         {
             "name": "bumbummen99/shoppingcart",
-            "version": "3.0.0",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bumbummen99/LaravelShoppingcart.git",
-                "reference": "b05497d17d468035869ed6d1e5af3849c9dcbea6"
+                "reference": "786477b54f637a57a80b3de387fb3dcdba5dd940"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bumbummen99/LaravelShoppingcart/zipball/b05497d17d468035869ed6d1e5af3849c9dcbea6",
-                "reference": "b05497d17d468035869ed6d1e5af3849c9dcbea6",
+                "url": "https://api.github.com/repos/bumbummen99/LaravelShoppingcart/zipball/786477b54f637a57a80b3de387fb3dcdba5dd940",
+                "reference": "786477b54f637a57a80b3de387fb3dcdba5dd940",
                 "shasum": ""
             },
             "require": {
@@ -238,9 +238,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bumbummen99/LaravelShoppingcart/issues",
-                "source": "https://github.com/bumbummen99/LaravelShoppingcart/tree/3.0.0"
+                "source": "https://github.com/bumbummen99/LaravelShoppingcart/tree/3.2.0"
             },
-            "time": "2020-09-23T00:12:49+00:00"
+            "time": "2020-12-27T20:13:34+00:00"
         },
         {
             "name": "cache/adapter-common",
