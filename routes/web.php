@@ -132,7 +132,7 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
             $controllerName = 'checkout';
             Route::group(['prefix' => $controllerName], function () {
                 $controller = HomeController::class;
-                Route::get('/check-out-product')->name("checkout_view");
+                Route::get('/check-out-product', [$controller, 'checkout_view'])->name("checkout_view");
                 Route::get('/check-out-order', [$controller, 'add_order_cart'])->name("add_order_cart");
                 Route::get('/check-out-order-detail', [$controller, 'add_order_detail'])->name("add_order_detail");
                 Route::get('/check-out-register-address', [LoginController::class, 'register_address'])->name("register_address");
