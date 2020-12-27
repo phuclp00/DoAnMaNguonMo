@@ -83,7 +83,7 @@
                                 <ul class="item item01">
                                     <li><a href="{{route('about_view')}}">About Page</a></li>
                                     <li><a href="#">My Account</a></li>
-                                    <li><a href="{{route('cart_view')}}">Cart Page</a></li>
+                                    <li><a href="#">Cart Page</a></li>
                                     <li><a href="{{route('checkout_view')}}">Checkout Page</a></li>
                                     <li><a href="{{route('checkout_view')}}">Wishlist Page</a></li>
                                     <li><a href="{{route('error_view')}}">404 Page</a></li>
@@ -118,7 +118,7 @@
                                     <span>$66.00</span>
                                 </div>
                                 <div class="mini_action checkout">
-                                    <a class="checkout__btn" href="{{route('cart_view')}}">Go to Checkout</a>
+                                    <a class="checkout__btn" href="#">Go to Checkout</a>
                                 </div>
                                 <div class="single__items">
                                     <div class="miniproduct">
@@ -173,7 +173,7 @@
                                     </div>
                                 </div>
                                 <div class="mini_action cart">
-                                    <a class="cart__btn" href="{{route('cart_view')}}">View and edit cart</a>
+                                    <a class="cart__btn" href="#">View and edit cart</a>
                                 </div>
                             </div>
                         </div>
@@ -263,7 +263,7 @@
                                 <li><a href="{{route('about_view')}}">About Page</a></li>
                                 
                                 <li><a href="#">My Account</a></li>
-                                <li><a href="{{route('cart_view')}}">Cart Page</a></li>
+                                <li><a href="#">Cart Page</a></li>
                                 <li><a href="{{route('checkout_view')}}">Checkout Page</a></li>
                                 <li><a href="{{route('wishlist_view')}}">Wishlist Page</a></li>
                                 <li><a href="{{route('error_view')}}">404 Page</a></li>

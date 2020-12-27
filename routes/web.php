@@ -33,20 +33,7 @@ use App\Models\SlideModel;
         
 //===================================LOG-IN ========================================================================//
 
-        //===================================SIGN-IN =========================================================//
-
-        $controllerName = 'sign-in';
-        Route::group(['prefix' => $controllerName], function () {
-            $controller = LoginController::class;
-            Route::get('/', [$controller, 'signin_view'])->name("sign-in_view");
-        });
-        //===================================SIGN-UP =========================================================//
-
-        $controllerName = 'sign-up';
-        Route::group(['prefix' => $controllerName], function () {
-            $controller = LoginController::class;
-            Route::get('/', [$controller, 'signup_view'])->name("sign-up_view");
-        });
+      
 //===================================HOME - PAGE ====================================================================//
         //======================================HOME - ABOUT ===================================================//
 
