@@ -170,7 +170,7 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
                 $controller = CategoryController::class;
                 Route::get('', [HomeController::class, 'shop_view'])->name("shop_view",["get_cat_items"=>$get_cat_items=null]);
                 //LAY ID CATEGORY KHI DUOC TRUYEN GIA TRI VAO TRA VE LIST THEO ID CATEGORY
-                Route::get('/cat_id',[HomeController::class,'get_category'])->name("category_view");
+                Route::get('/cat_id={cat_id}',)->name("category_view");
                 Route::get('/search_product}',[ CategoryController::class,'find_product'])->name("find_product");
             });
            
