@@ -127,10 +127,7 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
                 $controller = HomeController::class;
                 Route::get('/', [$controller, 'wishlist_view'])->name("wishlist_view");
             });
-            //======================================HOME - CHECKOUT ====================================//
-
-            
-            //======================================HOME - CART ====================================//
+           
             
             
             //======================================HOME - BLOG ====================================//
@@ -171,12 +168,12 @@ $prefixAdmin = Config::get('01.url.prefix_admin', 'error');
             $controllerName = 'shop';
             Route::group(['prefix' => $controllerName], function () {
                 $controller = CategoryController::class;
-                Route::get('/', [HomeController::class, 'shop_view'])->name("shop_view",["get_cat_items"=>$get_cat_items=null]);
+                Route::get('', [HomeController::class, 'shop_view'])->name("shop_view",["get_cat_items"=>$get_cat_items=null]);
                 //LAY ID CATEGORY KHI DUOC TRUYEN GIA TRI VAO TRA VE LIST THEO ID CATEGORY
                 Route::get('/cat_id={cat_id}',[HomeController::class,'get_category'])->name("category_view");
-                Route::get('/search_product}',[ CategoryController::class,'find_product'])->name("find_product");
+                Route::get('/search_product}',[ CategoryController::class,'find_product_kk'])->name("find_product");
             });
-            //====================================== - ACCOUNT ========================================================//
+           
 
           
 //===================================ADMIN ===========================================================================//
